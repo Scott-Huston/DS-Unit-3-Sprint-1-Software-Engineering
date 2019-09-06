@@ -9,7 +9,7 @@ class AcmeProductTests(unittest.TestCase):
         """Test default product price being 10."""
         prod = Product('Test Product')
         self.assertEqual(prod.price, 10)
-    
+
     def test_default_product_weight(self):
         prod = Product('Test Product')
         self.assertEqual(prod.weight, 20)
@@ -19,12 +19,13 @@ class AcmeProductTests(unittest.TestCase):
         self.assertEqual(prod.explode(), "...BABOOM!!")
         self.assertEqual(prod.stealability(), "Very stealable!")
 
+
 class AcmeReportTests(unittest.TestCase):
     """Making sure the reports work"""
     def test_default_num_products(self):
         prod_list = generate_products()
-        self.assertEqual(len(prod_list),30)
-    
+        self.assertEqual(len(prod_list), 30)
+
     def test_legal_names(self):
         prod_list = generate_products()
         for prod in prod_list:
