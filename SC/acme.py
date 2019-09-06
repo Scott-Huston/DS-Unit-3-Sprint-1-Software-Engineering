@@ -4,8 +4,9 @@ from random import randint
 class Product:
     '''Creating product class with generic fields
     '''
-    def __init__(self, name: str, price: int=10, weight: int=20, flammability: float=0.5,
-                 identifier: int=randint(1000000,9999999)):
+    def __init__(self, name: str, price: int=10, weight: int=20, 
+                 flammability: float=0.5,
+                 identifier: int=randint(1000000, 9999999)):
         self.name = name
         self.price = price
         self.weight = weight
@@ -20,19 +21,21 @@ class Product:
             return "Kinda stealable."
         else:
             return "Very stealable!"
-    
+
     def explode(self):
         explodibility = self.flammability*self.weight
-        if explodibility<10:
+        if explodibility < 10:
             return "...fizzle."
-        elif explodibility<50:
+        elif explodibility < 50:
             return "...boom!"
         else:
             return "...BABOOM!!"
 
+
 class BoxingGlove(Product):
-    def __init__(self, name: str, price: int=10, weight: int=10, flammability: float=0.5,
-                 identifier: int=randint(1000000,9999999)):
+    def __init__(self, name: str, price: int=10, weight: int=10, 
+                 flammability: float=0.5,
+                 identifier: int=randint(1000000, 9999999)):
         self.name = name
         self.price = price
         self.weight = weight
